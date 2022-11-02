@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#57259E"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/slotMachineImg"
+        android:layout_width="301dp"
+        android:layout_height="268dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameApp"
+        app:srcCompat="@drawable/slot_machine" />
+
+    <TextView
+        android:id="@+id/slot2"
+        android:layout_width="54dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="92dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/slotMachineImg"
+        app:layout_constraintTop_toTopOf="@+id/slotMachineImg" />
+
+    <TextView
+        android:id="@+id/slot3"
+        android:layout_width="54dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="48dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/slotMachineImg"
+        app:layout_constraintTop_toTopOf="@+id/slotMachineImg" />
+
+    <Button
+        android:id="@+id/startBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotationX="8"
+        android:text="Крутануть"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stavkaInput" />
+
+    <EditText
+        android:id="@+id/stavkaInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="0"
+        android:inputType="numberDecimal"
+        android:textColor="#FAC233"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slotMachineImg" />
+
+    <TextView
+        android:id="@+id/textSt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Ставка"
+        android:textColor="#FAC233"
+        app:layout_constraintStart_toStartOf="@+id/stavkaInput"
+        app:layout_constraintTop_toBottomOf="@+id/slotMachineImg" />
+
+    <TextView
+        android:id="@+id/nameApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="monospace"
+        android:text="LOH BET"
+        android:textColor="#FAC233"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/slot1"
+        android:layout_width="54dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="92dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/slotMachineImg"
+        app:layout_constraintTop_toTopOf="@+id/slotMachineImg" />
+
+    <TextView
+        android:id="@+id/infoWin"
+        android:layout_width="77dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="sans-serif-light"
+        android:text="XXX – х100\n123 – х5\n543 – х6\n248 – х3\n303 – х2"
+        android:textAlignment="viewStart"
+        android:textColor="#B6B6B6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startBt" />
+
+    <TextView
+        android:id="@+id/balanceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Баланс"
+        android:textColor="#FAC233"
+        app:layout_constraintStart_toStartOf="@+id/textWinOrLose"
+        app:layout_constraintTop_toBottomOf="@+id/startBt" />
+
+    <TextView
+        android:id="@+id/balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="44dp"
+        android:text="0"
+        android:textColor="#FAC233"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/balanceText"
+        app:layout_constraintTop_toBottomOf="@+id/startBt" />
+
+    <TextView
+        android:id="@+id/textWinOrLose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="16dp"
+        android:text="Сделайте ставку"
+        android:textColor="#FF0101"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startBt" />
+
+    <Button
+        android:id="@+id/payBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="пополнить"
+        app:layout_constraintStart_toStartOf="@+id/balanceText"
+        app:layout_constraintTop_toBottomOf="@+id/balanceText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
